@@ -1,4 +1,19 @@
 .App {
-  background-color: aqua;
-  height: 100vh;
+	display: flex;
+	align-items: center;	
+	justify-content: center;
+
+	height: 100vh;
+	width: 1fr;
+}
+
+.Board {
+	display: grid;
+	grid-template-columns: 65% 35%;
+
+	align-items: center;
+	justify-items: center;
+
+	height: 90%;
+	width: 70%;
 }

@@ -1,0 +1,11 @@
+.Shopping-cart {
+    display: grid;
+    position: relative;
+
+    width: 90%;
+    height: 95%;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px #595959;
+    border-radius: 20px;    
+}
