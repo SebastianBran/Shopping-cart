@@ -8,6 +8,15 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			shoppingCart: {
+				items: [
+					{name: "Product X", price: 9999, amount: 2},
+					{name: "Product X", price: 9999, amount: 2},
+					{name: "Product X", price: 9999, amount: 2},
+					{name: "Product X", price: 9999, amount: 2},
+					{name: "Product 1", price: 454, amount: 5}
+				]
+			},
 			products: {
 				items: [
 					{name: "Product X", price: 9999},
@@ -27,10 +36,10 @@ class App extends React.Component {
 		}
 	}
 
-	handleClickItem = (j) => {
+	handleClickItem = (key) => {
 		const products = this.state.products;
 		products.expandItem = true;
-		products.itemSelected = j;
+		products.itemSelected = key;
 		this.setState({products: products});
 	}
 
@@ -57,7 +66,9 @@ class App extends React.Component {
 						products={this.state.products}
 						handleClickItem={this.handleClickItem}
 					/>
-					<ShoppingCart/>
+					<ShoppingCart
+						shoppingCart={this.state.shoppingCart}
+					/>
 				</div>
 				{showExpandItem}
 			</div>

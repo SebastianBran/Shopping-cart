@@ -1,5 +1,6 @@
 .Shopping-cart {
     display: grid;
+    grid-template-rows: 10% 75% 15%;
     position: relative;
 
     width: 90%;
@@ -8,4 +9,134 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 10px #595959;
     border-radius: 20px;    
+
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    overflow-y: hidden;
+}
+
+.Background-shopping-cart-top,
+.Background-shopping-cart-bottom {
+    position: absolute;
+    width: 100%;
+    background-color: #73F497;
+}
+
+.Background-shopping-cart-top {
+    height: 120px;
+    top: 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.Background-shopping-cart-bottom {
+    height: 90px;
+    bottom: 0px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.Title-shopping-cart {
+    position: relative;
+    z-index: 10;
+    top: 15px;
+
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* CONTAINER SHOPPING CART */
+
+.Container-shopping-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 20;
+    overflow-y: scroll;
+
+    box-sizing: border-box;
+    padding-top: 5px;
+}
+
+.Item-shopping-cart {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    height: 100px;
+    width: 98%;
+
+    box-sizing: border-box;
+
+    background-color: white;
+    box-shadow: 0px 0px 5px #595959;
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+}
+
+.Container-image-shopping-cart {
+    background-color: black;
+
+    border-radius: 10px;
+}
+
+.Name-item-shopping-cart,
+.Price-item-shopping-cart,
+.Amount-item-shopping-cart {
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.Name-item-shopping-cart {
+    color: #706E6E;
+}
+
+.Price-item-shopping-cart {
+    font-weight: bolder;
+    line-height: 16px;
+}
+
+.Erase-item-shopping-cart {
+    height: 12px;
+    width: 12px;
+
+    background-color: white;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    margin-top: 8px;
+    margin-right: 8px;
+
+    background-image: url("/src/assets/icons/cancel.png");
+    background-size: contain;
+}
+
+/* PURCHASE INFO */
+
+.Purchase-info-shopping-cart {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+    align-items: center;
+
+    z-index: 10;
+
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.label-total,
+.label-cant-items {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    right: 0;
 }
