@@ -7,7 +7,8 @@ function Item(props) {
             <div className="Container-image-shopping-cart"></div>
             <div className="Container-info-item-shopping-cart">
                 <button 
-                    className="Erase-item-shopping-cart"    
+                    className="Delete-item-shopping-cart"    
+                    onClick={props.handleClickDeleteItem}
                 ></button>
                 <div className="Name-item-shopping-cart">{props.name}</div>
                 <div className="Price-item-shopping-cart">S/ {props.price}</div>
@@ -27,9 +28,16 @@ class ShoppingCart extends React.Component {
                     price={i.price}
                     amount={i.amount}
                     key={j}
+                    handleClickDeleteItem={() => this.props.handleClickDeleteItemShoppingCart(j)}
                 />
             );
         });
+        
+        let total = 0, cantItems = 0;
+        for(let i = 0; i < items.length; i++) {
+            total += items[i].price;
+            cantItems += items[i].amount;
+        }
 
         return(
             <div className="Shopping-cart">
@@ -40,8 +48,8 @@ class ShoppingCart extends React.Component {
                 </div>
                 <div className="Background-shopping-cart-bottom"></div>
                 <div className="Purchase-info-shopping-cart">
-                    <label>Total:</label><label className="label-total">S/ 99999</label>
-                    <label>Items:</label><label className="label-cant-items">45</label>
+                    <label>Total:</label><label className="label-total">S/ {total}</label>
+                    <label>Items:</label><label className="label-cant-items">{cantItems}</label>
                 </div>
             </div>
         );

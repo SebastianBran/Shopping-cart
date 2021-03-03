@@ -16,9 +16,19 @@ class ItemSelect extends React.Component {
                             </button>
                             <div className="Name-item-select">{this.props.item.name}</div>
                             <div className="Price-item-select">S/ {this.props.item.price}</div>
-                            <input type="number" className="Amount-item-select" min="1" max="100"></input>
+                            <input 
+                                type="number" 
+                                className="Amount-item-select" 
+                                min="1" 
+                                max="100"
+                                onChange={this.props.onChangeInputNumber}
+                            >    
+                            </input>
                         </div>
-                        <button className="Add-button">Add</button>
+                        <button 
+                            className="Add-button"
+                            onClick={() => this.props.handleClickAddItem()}
+                        >Add</button>
                     </div>
                 </div>
             </div>
