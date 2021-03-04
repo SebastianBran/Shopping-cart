@@ -4,15 +4,19 @@ import './Shopping-cart.css'
 function Item(props) {
     return(
         <div className="Item-shopping-cart">
-            <div className="Container-image-shopping-cart"></div>
+            <div 
+                className="Container-image-shopping-cart"
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + props.item.urlImage})`}}
+            >
+            </div>
             <div className="Container-info-item-shopping-cart">
                 <button 
                     className="Delete-item-shopping-cart"    
                     onClick={props.handleClickDeleteItem}
                 ></button>
-                <div className="Name-item-shopping-cart">{props.name}</div>
-                <div className="Price-item-shopping-cart">S/ {props.price}</div>
-                <div className="Amount-item-shopping-cart">{props.amount}</div>
+                <div className="Name-item-shopping-cart">{props.item.name}</div>
+                <div className="Price-item-shopping-cart">S/ {props.item.price}</div>
+                <div className="Amount-item-shopping-cart">{props.item.amount}</div>
             </div>
         </div>
     );
@@ -24,9 +28,7 @@ class ShoppingCart extends React.Component {
         const renderItems = items.map((i, j) => {
             return(
                 <Item
-                    name={i.name}
-                    price={i.price}
-                    amount={i.amount}
+                    item={i}
                     key={j}
                     handleClickDeleteItem={() => this.props.handleClickDeleteItemShoppingCart(j)}
                 />

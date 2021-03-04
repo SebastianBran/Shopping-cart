@@ -29,7 +29,11 @@
     height: 100%;
     width: 80%;
 
-    background-color: black;
+    background-color: #c5f3e4;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
     border-radius: 20px;
 }
 
@@ -79,7 +83,7 @@
     outline: none;
     cursor: pointer;
 
-    background-image: url("/src/assets/icons/cancel.png");
+    background-image: url("/src/icons/cancel.png");
     background-size: contain;
 }
 

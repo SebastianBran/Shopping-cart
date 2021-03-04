@@ -4,9 +4,13 @@ import './Products.css'
 function Item(props) {
     return(
         <div className="Item-products" onClick={props.handleClickItem}>
-            <div className="Container-image-item-products"></div>
-            <div className="Name-item-products">{props.name}</div>
-            <div className="Price-item-products">S/ {props.price}</div>
+            <div 
+                className="Container-image-item-products" 
+                style={{backgroundImage: `url(${process.env.PUBLIC_URL + props.item.urlImage})`}}
+            >
+            </div>
+            <div className="Name-item-products">{props.item.name}</div>
+            <div className="Price-item-products">S/ {props.item.price}</div>
         </div>
     );
 }
@@ -17,8 +21,7 @@ class Products extends React.Component {
         const renderItems = items.map((i, j) => {
             return(
                 <Item
-                    name={i.name}
-                    price={i.price}
+                    item={i}
                     key={j}
                     handleClickItem={() => this.props.handleClickItem(j)}
                 />

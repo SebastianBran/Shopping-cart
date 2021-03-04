@@ -59,6 +59,10 @@
     padding-top: 5px;
 }
 
+.Container-shopping-cart::-webkit-scrollbar {
+    display: none;
+}
+
 .Item-shopping-cart {
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -76,7 +80,10 @@
 }
 
 .Container-image-shopping-cart {
-    background-color: black;
+    background-color: #c5f3e4;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 
     border-radius: 10px;
 }
@@ -111,7 +118,7 @@
     margin-top: 8px;
     margin-right: 8px;
 
-    background-image: url("/src/assets/icons/cancel.png");
+    background-image: url("/src/icons/cancel.png");
     background-size: contain;
 }
 

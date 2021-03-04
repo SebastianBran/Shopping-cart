@@ -6,7 +6,11 @@ class ItemSelect extends React.Component {
         return(
             <div className="Item-select-bg">
                 <div className="Item-select-container">
-                    <div className="Item-select-img"></div>
+                    <div 
+                        className="Item-select-img"
+                        style={{backgroundImage: `url(${process.env.PUBLIC_URL + this.props.item.urlImage})`}}
+                    >
+                    </div>
                     <div className="Item-select-info">
                         <div className="Item-info">
                             <button 

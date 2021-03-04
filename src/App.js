@@ -10,16 +10,22 @@ class App extends React.Component {
 		this.state = {
 			products: {
 				items: [
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999},
-					{name: "Product 4", price: 100},
-					{name: "Product X", price: 9999},
-					{name: "Product X", price: 9999}
+					{name: "Acer nitro 5", price: 3200, urlImage: '/images/acer-nitro-5.png'},
+					{name: "Air dots", price: 70, urlImage: '/images/air-dots-xiaomi.png'},
+					{name: "Apple watch", price: 1300, urlImage: '/images/apple-watch.png'}, 
+					{name: "Ipad pro", price: 4200, urlImage: '/images/ipad-pro-2020.png'},
+					{name: "Iphone 11 pro max", price: 4800, urlImage: '/images/iphone-11-pro-max.png'},
+					{name: "Macbook pro", price: 8000, urlImage: '/images/macbook-pro-2020.png'},
+					{name: "Mi band 4", price: 100, urlImage: '/images/mi-band-4.png'},
+					{name: "Monitor", price: 600, urlImage: '/images/monitor-samsung.png'},
+					{name: "Mouse logitech g203", price: 120, urlImage: '/images/mouse-logitech-g203.png'},
+					{name: "Samsung s7 edge", price: 950, urlImage: '/images/samsung-s7-edge.png'},
+					{name: "Teclado Antryx tkl", price: 200, urlImage: '/images/teclado-antryx-tkl.png'},
+					{name: "Xiaomi redmi note 9", price: 850, urlImage: '/images/xiaomi-redmi-note-9.png'},
+					{name: "Airpods", price: 600, urlImage: '/images/airpods.png'},
+					{name: "Logitech g432", price: 230, urlImage: '/images/logitech-g432.png'},
+					{name: "JBL go 2", price: 110, urlImage: '/images/jbl-go-2.png'},
+					{name: "Playstation 5", price: 2500, urlImage: '/images/playstation-5.png'}
 				],
 				expandItem: false,
 				itemSelected: null,
@@ -53,7 +59,8 @@ class App extends React.Component {
 			key: itemSelected,
 			name: itemProduct.name,
 			price: itemProduct.price,
-			amount: this.state.products.amountOfItem
+			amount: this.state.products.amountOfItem,
+			urlImage: itemProduct.urlImage
 		}
 
 		let pos = -1;
