@@ -11,9 +11,9 @@ class ItemSelect extends React.Component {
                         style={{backgroundImage: `url(${process.env.PUBLIC_URL + this.props.item.urlImage})`}}
                     >
                         <button 
-                                className="Close-item-select-mobile"
-                                onClick={() => this.props.handleClickCloseItem()}
-                            >
+                            className="Close-item-select-mobile"
+                            onClick={() => this.props.handleClickCloseItem()}
+                        >
                         </button>
                     </div>
                     <div className="Item-select-info">
