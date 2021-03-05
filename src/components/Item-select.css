@@ -42,7 +42,7 @@
     width: 100%;
 
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 75% 25%;
 }
 
 .Add-button {
@@ -64,13 +64,13 @@
 .Name-item-select {
     font-size: 20px;
     color: #706E6E;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .Price-item-select {
     font-size: 24px;
     font-weight: 600;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .Close-item-select {
@@ -114,7 +114,7 @@
 
 @media (max-width: 750px) {
     .Item-select-container {
-        height: 60%;
+        height: 500px;
         width: 90%;
         max-width: 400px;
     
