@@ -37,14 +37,25 @@ class ShoppingCart extends React.Component {
         
         let total = 0, cantItems = 0;
         for(let i = 0; i < items.length; i++) {
-            total += items[i].price;
+            total += items[i].price * items[i].amount;
             cantItems += items[i].amount;
         }
 
+        let styles;
+        if(this.props.shoppingCart.openShoppingCart) styles = {zIndex: "30"};
+        else styles = {zIndex: "0"}
+
         return(
-            <div className="Shopping-cart">
+            <div className="Shopping-cart" style={styles}>
                 <div className="Background-shopping-cart-top"></div>
-                <div className="Title-shopping-cart">Shopping cart</div>
+                <div className="Title-shopping-cart">
+                    Shopping cart
+                    <button
+                        className="Return-to-products-shopping-cart"
+                        onClick={() => this.props.handleClickReturnToProducts()}
+                    >
+                    </button>
+                </div>
                 <div className="Container-shopping-cart">
                     {renderItems}
                 </div>

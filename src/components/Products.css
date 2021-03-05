@@ -15,6 +15,7 @@
     padding-right: 20px;
 
     overflow-y: hidden;
+    z-index: 1;
 }
 
 .Background-products {
@@ -29,6 +30,7 @@
 }
 
 .Title-products {
+    height: 40px;
     position: relative;
     z-index: 10;
     top: 15px;
@@ -37,9 +39,28 @@
     font-weight: 600;
 }
 
+.Open-shopping-cart-products {
+    height: 38px;
+    width: 30px;
+
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("/src/icons/shopping-cart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: none;
+}
+
 .Container-items-products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    justify-items: center;
     
     column-gap: 15px;
     row-gap: 10px;
@@ -63,8 +84,10 @@
 .Item-products {
     display: flex;
 
+    position: relative;
     flex-direction: column;
-    width: 100%;
+
+    width: 145px
 }
 
 .Container-image-item-products {
@@ -90,4 +113,19 @@
     font-weight: bolder;
     font-size: 14px;
     line-height: 16px;
+}
+
+@media (max-width: 750px) {
+    .Container-products {
+        grid-template-columns: 1fr;
+
+        border-radius: 0px;
+
+		height: 100%;
+		width: 100%;
+    }
+
+    .Background-products { border-radius: 0px; }
+
+    .Open-shopping-cart-products { display: inline; }
 }

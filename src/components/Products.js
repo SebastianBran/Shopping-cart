@@ -31,7 +31,14 @@ class Products extends React.Component {
         return(
             <div className="Container-products">
                 <div className="Background-products"></div>
-                <div className="Title-products">Products</div>
+                <div className="Title-products">
+                    Products
+                    <button
+                        className="Open-shopping-cart-products"
+                        onClick={() => this.props.handleClickOpenShoppingCart()}
+                    >
+                    </button>
+                </div>
                 <div className="Container-items-products">
                     {renderItems}
                 </div>

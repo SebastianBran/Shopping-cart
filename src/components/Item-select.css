@@ -77,7 +77,7 @@
     height: 15px;
     width: 15px;
 
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     float: right;
     border: none;
     outline: none;
@@ -87,6 +87,53 @@
     background-size: contain;
 }
 
+.Close-item-select-mobile {
+    height: 15px;
+    width: 15px;
+
+    background-color: rgba(255, 255, 255, 0);
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background-image: url("/src/icons/cancel.png");
+    background-size: contain;
+
+    margin-top: 10px;
+    margin-right: 10px;
+
+    display: none;
+}
+
 .Amount-item-select {
     width: 50px;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+@media (max-width: 750px) {
+    .Item-select-container {
+        height: 60%;
+        width: 90%;
+        max-width: 400px;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 1fr;
+
+        row-gap: 20px;
+    
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .Item-select-img {
+        height: 100%;
+        width: 100%;
+    
+        border-radius: 20px;
+    }
+
+    .Close-item-select-mobile { display: inline; }
+    .Close-item-select { display: none; }
 }
